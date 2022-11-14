@@ -25,5 +25,6 @@ type VerbConjugation {
 }
 
 type Query {
-    conjugate(infinitif: String!): VerbConjugation
+    conjugate(infinitif: String!): VerbConjugation!
+    verbs: [String!]!
 }

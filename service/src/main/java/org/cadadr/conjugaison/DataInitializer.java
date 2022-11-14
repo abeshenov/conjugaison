@@ -3,7 +3,7 @@ package org.cadadr.conjugaison;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.cadadr.conjugaison.domain.VerbConjugation;
-import org.cadadr.conjugaison.repository.VerbConjugationRepository;
+import org.cadadr.conjugaison.service.VerbConjugationService;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,23 +15,23 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class DatabaseInitializer {
+public class DataInitializer {
 
-    private final Logger logger = LoggerFactory.getLogger(DatabaseInitializer.class);
+    private final Logger logger = LoggerFactory.getLogger(DataInitializer.class);
 
     private static final File DATA_FILE = new File("verbs.json");
 
-    private final VerbConjugationRepository verbConjugationRepository;
+    private final VerbConjugationService verbConjugationService;
 
     @Autowired
-    public DatabaseInitializer(VerbConjugationRepository verbConjugationRepository) {
-        this.verbConjugationRepository = verbConjugationRepository;
+    public DataInitializer(@NotNull VerbConjugationService verbConjugationService) {
+        this.verbConjugationService = verbConjugationService;
         init();
     }
 
     private void init() {
         logger.info("Saving data to MongoDB");
-        verbConjugationRepository.saveAll(readData());
+        verbConjugationService.saveAll(readData());
     }
 
     private @NotNull List<VerbConjugation> readData() {

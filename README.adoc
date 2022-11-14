@@ -13,6 +13,6 @@ Feel free to use it in your projects or suggest additions / corrections.
 
 For the schema, see
 
-- link:./src/main/java/org/cadadr/conjugaison/domain/VerbConjugation.java[`VerbConjugation.java`]
+- link:./service/src/main/java/org/cadadr/conjugaison/domain/VerbConjugation.java[`VerbConjugation.java`]
 
-- link:./src/main/resources/graphql/schema.graphqls[`schema.graphqls`]
+- link:./service/src/main/resources/graphql/schema.graphqls[`schema.graphqls`]

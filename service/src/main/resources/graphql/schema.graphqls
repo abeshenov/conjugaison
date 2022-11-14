@@ -1,30 +1,83 @@
+# French verb conjugation table
 type VerbConjugation {
+
+    # Infinitif
     infinitif: String!
+
+    # Participe passé
     participePasse: String
+
+    # Participe present
     participePresent: String
+
+    # Verbe auxiliaire
     auxiliaire: String
+
+    # Forme pronominale
     formePronominale: String
+
+    # Forme non pronominale
     formeNonPronominale: String
+
+    # Present
     present: [String!]
+
+    # Imparfait
     imparfait: [String!]
+
+    # Passé simple
     passeSimple: [String!]
+
+    # Futur simple
     futurSimple: [String!]
+
+    # Passé composé
     passeCompose: [String!]
+
+    # Plus-que-parfait
     plusQueParfait: [String!]
+
+    # Passé anterieur
     passeAnterieur: [String!]
+
+    # Futur anterieur
     futurAnterieur: [String!]
+
+    # Subjonctif present
     subjonctifPresent: [String!]
+
+    # Subjonctif imparfait
     subjonctifImparfait: [String!]
+
+    # Subjonctif passé
     subjonctifPasse: [String!]
+
+    # Subjonctif plus-que-parfait
     subjonctifPlusQueParfait: [String!]
+
+    # Conditionnel present
     conditionnelPresent: [String!]
+
+    # Conditionnel passé
     conditionnelPasse: [String!]
+
+    # Conditionnel passé II
     conditionnelPasseII: [String!]
+
+    # Imperatif
     imperatif: [String!]
+
+    # Imperatif passé
     imperatifPasse: [String!]
+
 }
 
 type Query {
+
+    # Conjugate given verb
     conjugate(infinitif: String!): VerbConjugation!
+
+    # List available verbs
     verbs: [String!]!
+
 }

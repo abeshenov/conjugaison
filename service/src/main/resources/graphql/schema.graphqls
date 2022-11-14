@@ -7,7 +7,7 @@ type VerbConjugation {
     # Participe passé
     participePasse: String
 
-    # Participe present
+    # Participe présent
     participePresent: String
 
     # Verbe auxiliaire
@@ -43,7 +43,7 @@ type VerbConjugation {
     # Futur anterieur
     futurAnterieur: [String!]
 
-    # Subjonctif present
+    # Subjonctif présent
     subjonctifPresent: [String!]
 
     # Subjonctif imparfait
@@ -55,7 +55,7 @@ type VerbConjugation {
     # Subjonctif plus-que-parfait
     subjonctifPlusQueParfait: [String!]
 
-    # Conditionnel present
+    # Conditionnel présent
     conditionnelPresent: [String!]
 
     # Conditionnel passé

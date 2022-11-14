@@ -1,4 +1,4 @@
-rootProject.name = "conjugaison"
+rootProject.name = "conjugaison-service"
 
 pluginManagement {
     repositories {

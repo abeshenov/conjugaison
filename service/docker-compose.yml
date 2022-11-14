@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  mongodb:
+    container_name: conjugaison-mongodb
+    image: mongo:latest
+    restart: always
+    expose:
+      - '27017'
+  api:
+    container_name: conjugaison-api
+    build: .
+    image: conjugaison-service
+    depends_on:
+      - mongodb
+    ports:
+      - '8080:8080'    # GraphQL API
+    links:
+      - mongodb

@@ -1,17 +1,9 @@
 = Verb conjugation service
 
-First run MongoDB locally:
-
 [source, sh]
 ----
-sudo docker run --name conjugaison-mongo -p 27017:27017 -d mongo:latest
+./gradlew clean build -x test
+sudo docker compose up --build --detach
 ----
 
-Then start the service:
-
-[source, sh]
-----
-./gradlew bootRun
-----
-
-Then open http://localhost:8080/graphiql
+Then go to http://localhost:8080/graphiql

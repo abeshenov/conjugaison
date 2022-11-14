@@ -75,7 +75,7 @@ type VerbConjugation {
 type Query {
 
     # Conjugate given verb
-    conjugate(infinitif: String!): VerbConjugation!
+    conjugate(verb: String!): VerbConjugation!
 
     # List available verbs
     verbs: [String!]!

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public class VerbConjugationController {
     }
 
     @QueryMapping
-    public VerbConjugation conjugate(@Argument String infinitif) {
-        return verbConjugationService.getConjugation(infinitif)
-                .orElseThrow(() -> new VerbNotFoundException(infinitif));
+    public VerbConjugation conjugate(@Argument String verb) {
+        return verbConjugationService.getConjugation(verb)
+                .orElseThrow(() -> new VerbNotFoundException(verb));
     }
 
     @QueryMapping

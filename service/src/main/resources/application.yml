@@ -4,6 +4,8 @@ spring:
       host: localhost
       port: 27017
   graphql:
+    cors:
+      allowed-origins: "*"
     graphiql:
       enabled: true
   output:

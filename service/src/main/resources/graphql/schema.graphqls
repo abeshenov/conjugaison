@@ -1,0 +1,29 @@
+type VerbConjugation {
+    infinitif: String!
+    participePasse: String
+    participePresent: String
+    auxiliaire: String
+    formePronominale: String
+    formeNonPronominale: String
+    present: [String!]
+    imparfait: [String!]
+    passeSimple: [String!]
+    futurSimple: [String!]
+    passeCompose: [String!]
+    plusQueParfait: [String!]
+    passeAnterieur: [String!]
+    futurAnterieur: [String!]
+    subjonctifPresent: [String!]
+    subjonctifImparfait: [String!]
+    subjonctifPasse: [String!]
+    subjonctifPlusQueParfait: [String!]
+    conditionnelPresent: [String!]
+    conditionnelPasse: [String!]
+    conditionnelPasseII: [String!]
+    imperatif: [String!]
+    imperatifPasse: [String!]
+}
+
+type Query {
+    conjugate(infinitif: String!): VerbConjugation
+}

@@ -1,9 +1,9 @@
-import { Conjugation } from './components/Conjugation'
+import { ConjugationPage } from './pages/ConjugationPage'
 
 const App: () => JSX.Element =
   () => (
     <div className='App'>
-      <Conjugation verb='avoir' />
+      <ConjugationPage />
     </div>
   )
 

@@ -3,7 +3,10 @@
 - link:./service/[Spring Boot backend service] :
   provides a GraphQL API; stores data in MongoDB.
 
-- React.js frontend : to be added soon.
+- link:./react-client/[React.js frontend].
+
+
+== Conjugation data
 
 The conjugation data comes from the file
 link:./service/verbs.json[`verbs.json`].
@@ -11,7 +14,8 @@ link:./service/verbs.json[`verbs.json`].
 It was scrapped from various sources.
 Feel free to use it in your projects or suggest additions / corrections.
 
-For the schema, see
+
+== API Schema
 
 - link:./service/src/main/java/org/cadadr/conjugaison/domain/VerbConjugation.java[`VerbConjugation.java`]
 

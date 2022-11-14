@@ -19,7 +19,7 @@ type VerbConjugation {
     # Forme non pronominale
     formeNonPronominale: String
 
-    # Present
+    # Présent
     present: [String!]
 
     # Imparfait

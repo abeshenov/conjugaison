@@ -2,7 +2,7 @@
 
 [source, sh]
 ----
-./gradlew clean build -x test
+./gradlew bootJar
 sudo docker compose up --build --detach
 ----
 

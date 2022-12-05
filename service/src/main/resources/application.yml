@@ -1,6 +1,7 @@
 spring:
   data:
     mongodb:
+      auto-index-creation: true
       host: mongodb
       port: 27017
   graphql:

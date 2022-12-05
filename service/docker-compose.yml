@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   mongodb:
+    build: mongodb
     container_name: conjugaison-mongodb
-    image: mongo:latest
     restart: always
     expose:
       - '27017'

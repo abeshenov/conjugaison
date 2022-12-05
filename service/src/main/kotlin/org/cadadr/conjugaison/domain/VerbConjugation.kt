@@ -1,11 +1,14 @@
 package org.cadadr.conjugaison.domain
 
 import kotlinx.serialization.Serializable
-import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.index.Indexed
+import org.springframework.data.mongodb.core.mapping.Document
 
 @Serializable
+@Document
 data class VerbConjugation(
-    @Id val infinitif: String,
+    @Indexed(unique = true)
+    val infinitif: String,
     val participePasse: String? = null,
     val participePresent: String? = null,
     val auxiliaire: String? = null,

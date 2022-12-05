@@ -14,7 +14,7 @@ First start the backend service:
 [source, sh]
 ----
 cd service
-./gradlew clean build -x test
+./gradlew bootJar
 sudo docker compose up --build --detach
 ----
 
@@ -31,8 +31,8 @@ image::./graphiql.png[]
 
 == Conjugation data
 
-The conjugation data comes from the file
-link:./service/verbs.json[`verbs.json`].
+The conjugation data comes from
+link:./service/mongodb/mongo-dump.json[`service/mongodb/mongo-dump.json`].
 
 It was scrapped from various sources.
 Feel free to use it in your projects or suggest additions / corrections.
@@ -40,6 +40,6 @@ Feel free to use it in your projects or suggest additions / corrections.
 
 == API Schema
 
-- link:./src/main/kotlin/org/cadadr/conjugaison/domain/VerbConjugation.kt[`VerbConjugation.kt`]
+- link:./service/src/main/kotlin/org/cadadr/conjugaison/domain/VerbConjugation.kt[`org.cadadr.conjugaison.domain.VerbConjugation`]
 
-- link:./src/main/resources/graphql/schema.graphqls[`schema.graphqls`]
+- link:./service/src/main/resources/graphql/schema.graphqls[`GraphQL Schema`]

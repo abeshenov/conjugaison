@@ -40,6 +40,6 @@ Feel free to use it in your projects or suggest additions / corrections.
 
 == API Schema
 
-- link:./service/src/main/java/org/cadadr/conjugaison/domain/VerbConjugation.java[`VerbConjugation.java`]
+- link:./src/main/kotlin/org/cadadr/conjugaison/domain/VerbConjugation.kt[`VerbConjugation.kt`]
 
-- link:./service/src/main/resources/graphql/schema.graphqls[`schema.graphqls`]
+- link:./src/main/resources/graphql/schema.graphqls[`schema.graphqls`]
